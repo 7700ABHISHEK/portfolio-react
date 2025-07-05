@@ -50,10 +50,10 @@ const Header = () => {
 
             {
                 <div
-                    className={`xl:hidden overflow-hidden px-10 transition-all duration-500 ease-in-out ${menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    className={`xl:hidden overflow-hidden menu-open px-10 transition-all duration-500 ms-20 ease-in-out flex justify-start ${menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                         }`}
                 >
-                    <ul className="flex flex-col gap-4 text-sm font-medium py-4">
+                    <ul className="flex flex-col items-center justify-center gap-8 glass-card text-sm font-medium py-6 w-full max-w-xs">
                         <li className="hover:text-purple-800 cursor-pointer">Service</li>
                         <li className="hover:text-purple-800 cursor-pointer">Works</li>
                         <li className="hover:text-purple-800 cursor-pointer">Resume</li>
@@ -63,6 +63,7 @@ const Header = () => {
                     </ul>
                 </div>
             }
+
 
         </header>
     )

@@ -7,7 +7,7 @@ const App = () => {
 
     return (
         <div className="font-sora bg-[#0f0716]">
-            <div style={{ width: '100%', height: '600px', position: 'absolute' }}>
+            <div style={{ width: '100%', height: '600px', position: 'absolute', pointerEvents: 'none' }}>
                 <Particles
                     particleColors={['#ffffff', '#ffffff']}
                     particleCount={200}
@@ -19,8 +19,10 @@ const App = () => {
                     disableRotation={false}
                 />
             </div>
-            <Header />
-            <Home />
+            <div className="relative z-10">
+                <Header />
+                <Home />
+            </div>
         </div>
     )
 }
