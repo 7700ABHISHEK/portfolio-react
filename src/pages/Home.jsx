@@ -1,15 +1,11 @@
 import GlareHover from "../bitsComponent/GlareHover"
-import ProfileCard from "../bitsComponent/ProfileCard"
 import RotatingText from "../bitsComponent/RotatingText"
+import ProfileCardUi from "../components/ProfileCardUI";
 
 const Home = () => {
 
-    const leetCode = () => {
-        window.open("https://www.hackerrank.com/profile/7700_Abhishekdu1", "_blank");
-    }
-
     return (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-10 pt-20 pb-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-10 pt-20 pb-32">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
 
                 {/* Left Info Section */}
@@ -82,22 +78,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Right Profile Card Section */}
-                <div className="w-full lg:w-6/12 flex justify-center ">
-                    <div className="profile-card max-w-sm w-full">
-                        <ProfileCard
-                            name="Abhishek Dubey"
-                            title="Full Stack Web Developer"
-                            handle="javicodes"
-                            status="Online"
-                            contactText="Contact Me"
-                            avatarUrl="/path/to/avatar.jpg"
-                            showUserInfo={true}
-                            enableTilt={true}
-                            onContactClick={leetCode}
-                        />
-                    </div>
-                </div>
+                <ProfileCardUi />
 
             </div>
         </div>

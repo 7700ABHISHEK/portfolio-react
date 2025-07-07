@@ -242,7 +242,7 @@ const ProfileCardComponent = ({
     return (
         <div
             ref={wrapRef}
-            className={`pc-card-wrapper ${className}`.trim()}
+            className={`flex justify-center pc-card-wrapper ${className}`.trim()}
             style={cardStyle}
         >
             <section ref={cardRef} className="pc-card">
