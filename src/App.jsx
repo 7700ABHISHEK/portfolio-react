@@ -3,6 +3,7 @@ import 'remixicon/fonts/remixicon.css'
 import Home from "./pages/home"
 import Particles from "./bitsComponent/Particles"
 import MyService from "./pages/MyService"
+import MyWork from "./pages/MyWork"
 
 const App = () => {
 
@@ -32,6 +33,7 @@ const App = () => {
                 <Header />
                 <Home />
                 <MyService />
+                <MyWork />
             </div>
         </div>
     )

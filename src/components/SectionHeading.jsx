@@ -1,21 +1,20 @@
 import BlurText from "../bitsComponent/BlurText"
 
-const SectionHeading = () => {
+const SectionHeading = ({ title, dsc }) => {
 
-    const handleAnimationComplete = () => {
-        console.log('Animation completed!');
-    };
 
     return (
         <div>
             <BlurText
-                text="My Services"
+                text={title}
                 delay={150}
                 animateBy="words"
                 direction="top"
-                onAnimationComplete={handleAnimationComplete}
-                className="text-4xl my-8 text-white flex justify-center"
+                className="text-4xl font-bold my-6 text-[#8750f7] flex justify-center"
             />
+            <div className="text-center text-[#DDDDDD] font-semibold mb-5 leading-8">
+                {dsc}
+            </div>
         </div>
     )
 }
