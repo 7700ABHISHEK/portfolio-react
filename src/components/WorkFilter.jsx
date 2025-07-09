@@ -1,20 +1,23 @@
 import { useState } from "react";
 
-const WorkFilter = () => {
-    const filters = ["All", "React", "JavaScript", "HTML / CSS"];
-    const [activeFilter, setActiveFilter] = useState("All");
+const WorkFilter = ({getName}) => {
+    const filters = ["all", "react", "javascript", "html / css"];
+
+    const getId = (id) => {
+        getName(id);
+    }
 
     return (
         <div className="px-4 py-6 flex justify-center">
             <div className="inline-flex flex-wrap justify-center gap-3 sm:gap-5 bg-[#000012] rounded-full shadow-lg p-2">
                 {filters.map((filter, index) => (
                     <button
+                        id = {`${filter}`}
                         key={index}
-                        onClick={() => setActiveFilter(filter)}
-                        className={`px-4 py-2 rounded-3xl text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out
-                            ${activeFilter === filter
-                                ? "bg-[#8750f7] text-white"
-                                : "bg-[#1a1a3c] text-white hover:bg-[#8750f7]"}
+                        onClick={(e) => {
+                            getId(e.target.id)
+                        }}
+                        className={`px-4 py-2 capitalize rounded-3xl text-sm sm:text-base border border-[#8750f7] text-[#8750f7] focus:bg-[#8750f7] focus:text-white font-semibold transition-all duration-300 ease-in-out
                         `}
                     >
                         {filter}

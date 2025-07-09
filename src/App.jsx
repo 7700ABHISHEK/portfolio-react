@@ -4,6 +4,7 @@ import Home from "./pages/home"
 import Particles from "./bitsComponent/Particles"
 import MyService from "./pages/MyService"
 import MyWork from "./pages/MyWork"
+import MySkills from "./pages/MySkills"
 
 const App = () => {
 
@@ -34,6 +35,7 @@ const App = () => {
                 <Home />
                 <MyService />
                 <MyWork />
+                <MySkills />
             </div>
         </div>
     )

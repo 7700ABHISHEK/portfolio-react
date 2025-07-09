@@ -56,7 +56,7 @@ const Home = () => {
                                         transitionDuration={800}
                                         playOnce={false}
                                     >
-                                        <span className="text-sm text-white">Download CV <i className="ri-download-2-line text-xl ms-2"></i></span>
+                                        <span className="text-sm text-white">Resume <i className="ri-download-2-line text-xl ms-2"></i></span>
                                     </GlareHover>
                                 </div>
                                 <ul className="flex justify-center sm:justify-start">

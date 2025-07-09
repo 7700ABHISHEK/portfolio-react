@@ -1,69 +1,66 @@
-const ProjectWork = () => {
-    const projects = [
-        {
-            heading: "Todo List",
-            dsc: "A clean and functional todo list built with React.js.",
-            img: "/todo-list.png"
-        },
-        {
-            heading: "Notes App",
-            dsc: "Minimal notes keeping app using React hooks.",
-            img: "/todo-list.png"
-        },
-        {
-            heading: "Task Manager",
-            dsc: "Manage your tasks with filters and tags.",
-            img: "/todo-list.png"
-        },
-        {
-            heading: "Time Tracker",
-            dsc: "Track your time to boost productivity.",
-            img: "/todo-list.png"
-        },
-        {
-            heading: "Focus Booster",
-            dsc: "Pomodoro-based timer app for focused work.",
-            img: "/todo-list.png"
-        },
-        {
-            heading: "Politixy",
-            dsc: "Responsive political news site made with HTML & CSS.",
-            img: "/todo-list.png"
-        },
-    ];
+import { FaGithub } from "react-icons/fa";
+import { MdLiveTv } from "react-icons/md";
 
+const ProjectWork = ({ projects }) => {
     return (
-        <section className="bg-[#0e0e10] py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <div
-                            key={index}
-                            className="relative overflow-hidden rounded-2xl shadow-lg bg-[#1a1a1d] group transition-all duration-500 hover:scale-[1.02]"
-                        >
-                            {/* Project Image */}
-                            <img
-                                src={project.img}
-                                alt={project.heading}
-                                className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
+        <div className="relative overflow-hidden py-16 bg-gradient-to-br via-slate-100/80 to-blue-50/60 dark:from-black dark:via-gray-950/80 dark:to-slate-950/60">
+            <section>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {projects.map((project, index) => (
+                            <div
+                                key={index}
+                                className="group relative flex flex-col bg-gradient-to-br from-gray-900/80 via-gray-800/60 to-gray-900/80 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 border border-gray-700/40 rounded-3xl shadow-lg hover:shadow-purple-500/30 transition-transform duration-300 hover:-translate-y-2"
+                            >
+                                {/* Project Image */}
+                                <div className="overflow-hidden rounded-t-3xl">
+                                    <a href={project.live} target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            src={project.img}
+                                            alt={project.heading}
+                                            className="w-full h-52 object-cover rounded-t-3xl transform group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </a>
+                                </div>
 
-                            {/* Overlay Info */}
-                            <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
-                                <div className="text-white space-y-2">
-                                    <h3 className="text-xl sm:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 animate-fadeInUp">
-                                        {project.heading}
-                                    </h3>
-                                    <p className="text-sm text-gray-300 animate-fadeInUp delay-100">
+                                {/* Project Content */}
+                                <div className="p-6 flex flex-col justify-between flex-1">
+                                    {/* Heading & Icons */}
+                                    <div className="flex items-center justify-between mb-3">
+                                        <h3 className="text-xl font-semibold text-white tracking-wide">
+                                            {project.heading}
+                                        </h3>
+                                        <div className="flex gap-2">
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-purple-600 text-white transition-colors duration-300"
+                                            >
+                                                <FaGithub size={18} />
+                                            </a>
+                                            <a
+                                                href={project.live}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-purple-600 text-white transition-colors duration-300"
+                                            >
+                                                <MdLiveTv size={20} />
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    {/* Description */}
+                                    <p className="text-gray-400 text-sm leading-relaxed mt-2">
                                         {project.dsc}
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 };
 
