@@ -56,7 +56,7 @@ const Home = () => {
                                         transitionDuration={800}
                                         playOnce={false}
                                     >
-                                        <a href="/Black White Minimalist CV Resume A4 Document.pdf" target="_blank">
+                                        <a href="/resume/my-resume.pdf" target="_blank">
                                             <span className="text-sm text-white">Resume <i className="ri-download-2-line text-xl ms-2"></i>
                                             </span>
                                         </a>
