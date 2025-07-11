@@ -1,6 +1,6 @@
 import Header from "./components/Header"
 import 'remixicon/fonts/remixicon.css'
-import Home from "./pages/home"
+import Home from "./pages/Home"
 import Particles from "./bitsComponent/Particles"
 import MyService from "./pages/MyService"
 import MyWork from "./pages/MyWork"
