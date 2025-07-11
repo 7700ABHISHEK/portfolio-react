@@ -5,6 +5,9 @@ import Particles from "./bitsComponent/Particles"
 import MyService from "./pages/MyService"
 import MyWork from "./pages/MyWork"
 import MySkills from "./pages/MySkills"
+import Testimonial from "./pages/Testimonial"
+import Contact from "./pages/Contact"
+import Footer from "./components/Footer"
 
 const App = () => {
 
@@ -36,6 +39,9 @@ const App = () => {
                 <MyService />
                 <MyWork />
                 <MySkills />
+                <Testimonial />
+                <Contact />
+                <Footer />
             </div>
         </div>
     )

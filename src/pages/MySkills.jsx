@@ -18,7 +18,7 @@ const MySkills = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div id="skills" className="container mx-auto px-4 py-10">
       <SectionHeading
         title={"My Skills"}
         dsc={"These skills reflect my passion, dedication, and development journey."}

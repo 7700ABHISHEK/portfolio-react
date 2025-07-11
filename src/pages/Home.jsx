@@ -5,7 +5,7 @@ import ProfileCardUi from "../components/ProfileCardUI";
 const Home = () => {
 
     return (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-10 pt-20 pb-32">
+        <div id="home" className="container mx-auto px-4 sm:px-6 lg:px-10 pt-20 pb-32">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
 
                 {/* Left Info Section */}
@@ -56,7 +56,10 @@ const Home = () => {
                                         transitionDuration={800}
                                         playOnce={false}
                                     >
-                                        <span className="text-sm text-white">Resume <i className="ri-download-2-line text-xl ms-2"></i></span>
+                                        <a href="/Black White Minimalist CV Resume A4 Document.pdf" target="_blank">
+                                            <span className="text-sm text-white">Resume <i className="ri-download-2-line text-xl ms-2"></i>
+                                            </span>
+                                        </a>
                                     </GlareHover>
                                 </div>
                                 <ul className="flex justify-center sm:justify-start">

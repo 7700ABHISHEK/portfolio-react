@@ -98,7 +98,7 @@ const MyWork = () => {
 
 
     return (
-        <div className="container mx-auto ">
+        <div id="works" className="container mx-auto">
             <SectionHeading title={'My Recent Works'} dsc={'We make websites that works efficiently on every device and also with modern responsive UI'} />
             <WorkFilter getName={getName}/>
             <ProjectWork projects={filteredArr}/>
