@@ -1,6 +1,6 @@
 import GlareHover from "../bitsComponent/GlareHover"
 import RotatingText from "../bitsComponent/RotatingText"
-import ProfileCardUi from "../components/ProfileCardUI";
+import ProfileCardUi from "../components/ProfileCardUi";
 
 const Home = () => {
 
